@@ -51,7 +51,7 @@ const CreateManga = () => {
     }
   };
 
-  // --- ฟังก์ชันบันทึกข้อมูลหลัก ---
+  // ฟังก์ชันบันทึกข้อมูลหลัก 
   const handleSave = () => {
     if (!title.trim()) {
       alert("กรุณาระบุชื่อเรื่องก่อนบันทึก");
@@ -65,7 +65,7 @@ const CreateManga = () => {
       author: author || "นามปากกา",
       intro: intro, 
       synopsis: synopsis, 
-      image: previewImage || '', // เก็บ Base64 ของรูปภาพ
+      image: previewImage || '', // เก็บ Base ของรูปภาพ
       status: isPublished ? 'published' : 'draft',
       isPublished: isPublished,
       isCompleted: isCompleted,
@@ -80,8 +80,7 @@ const CreateManga = () => {
 
     alert("สร้างการ์ตูนเรื่องใหม่สำเร็จ!"); 
     
-    // หลังจากบันทึก ให้เด้งกลับไปหน้าจัดการงานเขียน (Writing) 
-    // เพื่อให้เห็นรายการที่เพิ่งเพิ่มเข้าไป
+    // หลังจากบันทึก ให้เด้งกลับไปหน้าจัดการงานเขียน (Writing) เพื่อให้เห็นรายการที่เพิ่งเพิ่มเข้าไป
     navigate('/writing');
   };
 
@@ -219,7 +218,7 @@ const CreateManga = () => {
   );
 };
 
-// --- Styles (คงเดิม) ---
+// Styles (คงเดิม)
 const pageContainer: React.CSSProperties = { minHeight: '100vh', backgroundColor: '#f9f9f9', fontFamily: "'Kanit', sans-serif", padding: '20px' };
 const headerNav = { maxWidth: '900px', margin: '0 auto 20px auto' };
 const backBtn = { background: 'none', border: 'none', color: '#bc7df2', cursor: 'pointer', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '16px' };

@@ -26,7 +26,7 @@ const Login = () => {
             type="password" 
             placeholder="รหัสผ่าน" 
             style={inputStyle} 
-            autoComplete="new-password" // แก้จุด 4 จุดที่ขึ้นเองตอนเริ่ม
+            autoComplete="new-password"
           />
         </div>
 
@@ -44,7 +44,7 @@ const Login = () => {
   );
 };
 
-// --- Styles (เน้นฟอนต์ Kanit ตามบรีฟ) ---
+// Styles 
 const containerStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
@@ -90,7 +90,7 @@ const inputStyle: React.CSSProperties = {
   border: '1px solid #ddd',
   fontSize: '16px',
   boxSizing: 'border-box',
-  fontFamily: "'Kanit', sans-serif", // ใส่ฟอนต์ที่ช่องกรอกด้วย
+  fontFamily: "'Kanit', sans-serif", 
 };
 
 const buttonStyle: React.CSSProperties = {

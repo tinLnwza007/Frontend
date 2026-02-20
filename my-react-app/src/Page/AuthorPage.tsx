@@ -17,7 +17,7 @@ const AuthorPage = () => {
 
   return (
     <div style={containerStyle}>
-      {/* --- ปุ่มย้อนกลับ --- */}
+      {/* ปุ่มย้อนกลับ */}
       <button onClick={() => navigate(-1)} style={backBtnStyle}>
         <ChevronLeft size={18} /> ย้อนกลับ
       </button>
@@ -83,7 +83,7 @@ const AuthorPage = () => {
   );
 };
 
-// --- Styles (Compact & Kanit) ---
+// Styles (Compact & Kanit)
 const containerStyle: React.CSSProperties = { 
   maxWidth: '800px', 
   margin: '20px auto', 

@@ -62,7 +62,7 @@ const ReadNovel = () => {
   );
 };
 
-// Styles (เหมือนเดิมตามไฟล์ที่คุณให้มา)
+// Styles 
 const topNavStyle: React.CSSProperties = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px', borderBottom: '1px solid #eee', position: 'sticky', top: 0, backgroundColor: '#fff', zIndex: 10 };
 const iconBtnStyle: React.CSSProperties = { background: 'none', border: 'none', cursor: 'pointer' };
 const contentContainerStyle: React.CSSProperties = { maxWidth: '700px', margin: '0 auto', padding: '40px 20px' };

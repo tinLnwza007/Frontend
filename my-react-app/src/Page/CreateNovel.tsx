@@ -30,7 +30,7 @@ const CreateNovel = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // ฟังก์ชันเลือกไฟล์ตามประเภทที่กำหนดเหมือน CreateManga
+  // ฟังก์ชันเลือกไฟล์ตามประเภทที่กำหนด
   const handleSelectFile = (accept: string) => {
     if (fileInputRef.current) {
       fileInputRef.current.accept = accept;
@@ -111,7 +111,7 @@ const CreateNovel = () => {
               
               <input type="file" ref={fileInputRef} style={{ display: 'none' }} onChange={onFileChange} />
               
-              {/* ปรับ Dropdown ให้มีตัวเลือกไฟล์เหมือน CreateManga */}
+              {/* ปรับ Dropdown ให้มีตัวเลือกไฟล์ */}
               {showUploadDropdown && (
                 <div style={darkDropdown}>
                   <div style={menuItem} onClick={() => handleSelectFile('.jpg,.jpeg')}>
@@ -205,7 +205,7 @@ const CreateNovel = () => {
   );
 };
 
-// --- Styles (คงเดิมเพื่อรักษา Layout ของ Novel แต่ปรับส่วน UI เล็กน้อยให้เข้ากัน) ---
+// Styles 
 const pageContainer: React.CSSProperties = { minHeight: '100vh', backgroundColor: '#f9f9f9', fontFamily: "'Kanit', sans-serif", padding: '20px' };
 const headerNav = { maxWidth: '900px', margin: '0 auto 20px auto' };
 const backBtn = { background: 'none', border: 'none', color: '#bc7df2', cursor: 'pointer', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '16px' };

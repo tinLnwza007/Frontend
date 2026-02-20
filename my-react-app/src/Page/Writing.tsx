@@ -45,7 +45,7 @@ const Writing = () => {
     }
   };
 
-  // กรองรายการตามหมวดที่เลือก (นิยาย/การ์ตูน)
+  // กรองรายการตามหมวดที่เลือก นิยาย/การ์ตูน
   const displayWorks = works.filter(w => 
     activeCategory === 'นิยาย' ? w.type === 'novel' : w.type === 'manga'
   );
@@ -95,7 +95,7 @@ const Writing = () => {
                   height: '70px', 
                   borderRadius: '8px', 
                   marginRight: '20px', 
-                  backgroundImage: work.image ? `url(${work.image})` : 'none', // รองรับชื่อ property 'image' จาก CreateManga/Novel
+                  backgroundImage: work.image ? `url(${work.image})` : 'none', // รองรับชื่อ property 'image' 
                   backgroundSize: 'cover', 
                   backgroundPosition: 'center', 
                   backgroundColor: '#ddd' 

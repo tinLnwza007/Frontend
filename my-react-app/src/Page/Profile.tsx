@@ -6,21 +6,21 @@ const Profile = () => {
   const [username, setUsername] = useState('Susu');
   const [showEditMenu, setShowEditMenu] = useState(false);
 
-  // 2. State สำรอง สำหรับพักค่าที่กำลังพิมพ์ใน Input
+  // 2. State สำรองสำหรับพักค่าที่กำลังพิมพ์ใน Input
   const [tempUsername, setTempUsername] = useState('Susu');
 
-  // ฟังก์ชัน: เมื่อกดปุ่มแก้ไข (ดึงชื่อปัจจุบันไปรอไว้ในช่อง Input)
+  // เมื่อกดปุ่มแก้ไขดึงชื่อปัจจุบันไปรอไว้ในช่อง Input
   const handleOpenEdit = () => {
     setTempUsername(username); 
     setShowEditMenu(true);
   };
 
-  // ฟังก์ชัน: เมื่อกดยกเลิก (ปิดเมนู โดยไม่เปลี่ยนชื่อจริง)
+  // เมื่อกดยกเลิกปิดเมนูโดยไม่เปลี่ยนชื่อจริง
   const handleCancel = () => {
     setShowEditMenu(false);
   };
 
-  // ฟังก์ชัน: เมื่อกดยืนยัน (เอาชื่อที่พิมพ์ใหม่ ไปทับชื่อจริง)
+  // เมื่อกดยืนยันเอาชื่อที่พิมพ์ใหม่ไปทับชื่อจริง
   const handleConfirm = () => {
     setUsername(tempUsername); 
     setShowEditMenu(false);
@@ -28,7 +28,7 @@ const Profile = () => {
 
   return (
     <div style={containerStyle}>
-      {/* Navbar ดึงมาใช้จาก Component กลาง */}
+      {/* Navbar  */}
 
 
       <div style={contentWrapper}>
@@ -99,7 +99,7 @@ const Profile = () => {
   );
 };
 
-// --- Styles ---
+// Styles 
 const containerStyle: React.CSSProperties = { minHeight: '100vh', backgroundColor: '#fff', fontFamily: "'Kanit', sans-serif" };
 const contentWrapper: React.CSSProperties = { maxWidth: '1100px', margin: '40px auto', padding: '0 20px' };
 const pageTitle: React.CSSProperties = { color: '#9b67bd', fontSize: '32px', marginBottom: '25px' };

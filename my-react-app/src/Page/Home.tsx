@@ -103,7 +103,7 @@ const genres = [
   { name: 'สาระความรู้', color: '#7EB5E6' },
 ];
 
-// --- Styles ---
+// Styles 
 const containerStyle: React.CSSProperties = { backgroundColor: '#fff', minHeight: '100vh', fontFamily: "'Kanit', sans-serif" };
 const wideContent: React.CSSProperties = { maxWidth: '1700px', margin: '30px auto', padding: '0 30px' };
 const bannerGrid: React.CSSProperties = { display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', marginBottom: '40px' };

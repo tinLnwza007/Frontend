@@ -25,7 +25,7 @@ const ForgotPassword = () => {
   );
 };
 
-// --- Styles ---
+// Styles 
 const containerStyle: React.CSSProperties = { display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)' };
 const cardStyle: React.CSSProperties = { width: '100%', maxWidth: '380px', padding: '40px', backgroundColor: '#fff', borderRadius: '24px', boxShadow: '0 15px 35px rgba(0,0,0,0.1)', textAlign: 'center' };
 const inputStyle: React.CSSProperties = { width: '100%', padding: '14px', marginBottom: '15px', borderRadius: '12px', border: '1px solid #eee', fontSize: '15px', boxSizing: 'border-box' };

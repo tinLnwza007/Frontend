@@ -9,7 +9,7 @@ const BuildManga = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   
-  // --- States ---
+  // States 
   const [work, setWork] = useState<any>(null);
   const [episodes, setEpisodes] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ const BuildManga = () => {
     loadData();
   }, [id]);
 
-  // --- Functions ---
+  // Functions 
   const handleTogglePublish = () => {
     if (!isPublished) {
       setShowPublishModal(true);
@@ -82,7 +82,7 @@ const BuildManga = () => {
       </div>
 
       <div style={mainContent}>
-        {/* รายละเอียดมังงะ (UI ตาม BuildNovel) */}
+        {/* รายละเอียดมังงะ */}
         <div style={detailCard}>
           <div style={topSection}>
             <div style={{
@@ -118,7 +118,7 @@ const BuildManga = () => {
          onClick={() => navigate(`/add-chapter-manga/${id}`)}// ส่ง ID ของมังงะไปด้วย
         > เพิ่มตอนใหม่ + </button>
 
-        {/* รายการตอน (UI ตาม BuildNovel) */}
+        {/* รายการตอน */}
         <div style={chapterListContainer}>
           {episodes.length > 0 ? (
             episodes.map((ep, index) => (
@@ -148,7 +148,7 @@ const BuildManga = () => {
           )}
         </div>
 
-        {/* Status Bar ด้านล่าง (UI ตาม BuildNovel) */}
+        {/* Status Bar ด้านล่าง */}
         <div style={statusRowContainer}>
           <span style={statusTitle}>เผยแพร่ :</span>
           <div style={statusWhiteCard}>
@@ -214,7 +214,7 @@ const BuildManga = () => {
   );
 };
 
-// --- Styles (ถอดแบบมาจาก BuildNovel.tsx ทุกประการ) ---
+// Styles 
 const pageContainer: React.CSSProperties = { minHeight: '100vh', backgroundColor: '#f9f9f9', padding: '20px', fontFamily: "'Kanit', sans-serif" };
 const headerNav = { maxWidth: '900px', margin: '0 auto 20px auto' };
 const backBtn = { background: 'none', border: 'none', color: '#bc7df2', cursor: 'pointer', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '16px' };

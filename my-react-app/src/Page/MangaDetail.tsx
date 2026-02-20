@@ -61,7 +61,7 @@ const MangaDetail = () => {
   );
 };
 
-// Styles (เหมือนเดิม)
+// Styles 
 const containerStyle: React.CSSProperties = { maxWidth: '900px', margin: '40px auto', padding: '0 20px', fontFamily: "'Kanit', sans-serif" };
 const backBtn: React.CSSProperties = { border: 'none', background: 'none', color: '#9b67bd', cursor: 'pointer', display: 'flex', alignItems: 'center', marginBottom: '20px', fontWeight: 'bold' };
 const headerCard: React.CSSProperties = { display: 'flex', gap: '30px', backgroundColor: '#fff', padding: '30px', borderRadius: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', marginBottom: '40px' };

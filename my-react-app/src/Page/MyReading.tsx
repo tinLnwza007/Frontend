@@ -25,7 +25,7 @@ const MyReading = () => {
           </h2>
         </div>
 
-        {/* 2. ปรับปรุง Tab Container ให้กดสลับได้เหมือนหน้า Home */}
+        {/* 2.Tab Containerกดสลับได้ */}
         <div style={tabContainer}>
           <span 
             style={activeTab === 'bookshelf' ? activeTabStyle : inactiveTabStyle} 
@@ -71,7 +71,7 @@ const MyReading = () => {
   );
 };
 
-// --- Styles ---
+// Styles 
 const containerStyle: React.CSSProperties = { backgroundColor: '#f9f9f9', minHeight: '100vh', fontFamily: "'Kanit', sans-serif", paddingBottom: '50px' };
 const wideContent: React.CSSProperties = { maxWidth: '1200px', margin: '0 auto', padding: '40px 20px' };
 const headerSection: React.CSSProperties = { marginBottom: '30px' };

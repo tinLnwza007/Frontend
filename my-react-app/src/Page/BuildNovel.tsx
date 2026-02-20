@@ -5,7 +5,7 @@ import { ChevronLeft, Eye, Heart, Bookmark, Edit, Trash2 } from 'lucide-react';
 const BuildNovel = () => {
   const navigate = useNavigate();
   
-  // --- States ---
+  // States 
   const [chapters, setChapters] = useState<any[]>([]);
   const [isPublished, setIsPublished] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
@@ -16,16 +16,15 @@ const BuildNovel = () => {
     const savedChapters = JSON.parse(localStorage.getItem('novel_chapters') || '[]');
     setChapters(savedChapters);
   }, []);
-
-  // --- Functions ---
+ 
   
   // เมื่อกดเปิด/ปิด Switch เผยแพร่
   const handleTogglePublish = () => {
     if (!isPublished) {
-      // ถ้าปัจจุบันปิดอยู่ (สีเทา) แล้วจะเปิด ให้แสดง Modal
+      // ถ้าปัจจุบันปิดอยู่แล้วจะเปิด ให้แสดง Modal
       setShowPublishModal(true);
     } else {
-      // ถ้าเปิดอยู่แล้ว (สีเขียว) กดปิดได้เลย
+      // ถ้าเปิดอยู่แล้วกดปิดได้เลย
       setIsPublished(false);
     }
   };
@@ -152,7 +151,7 @@ const BuildNovel = () => {
         </div>
       </div>
 
-      {/* --- Publish Modal (Dropdown จากหน้า CreateNovel) --- */}
+      {/* Publish Modal  */}
       {showPublishModal && (
         <div style={modalOverlay}>
           <div style={modalContainer}>
@@ -178,7 +177,7 @@ const BuildNovel = () => {
   );
 };
 
-// --- Styles ---
+// Styles 
 const pageContainer: React.CSSProperties = { minHeight: '100vh', backgroundColor: '#f9f9f9', padding: '20px', fontFamily: "'Kanit', sans-serif" };
 const headerNav = { maxWidth: '900px', margin: '0 auto 20px auto' };
 const backBtn = { background: 'none', border: 'none', color: '#bc7df2', cursor: 'pointer', display: 'flex', alignItems: 'center', fontWeight: 'bold' };
@@ -218,7 +217,7 @@ const actionButtons = { display: 'flex', gap: '12px' };
 const btnGray = { padding: '10px 35px', borderRadius: '15px', border: 'none', backgroundColor: '#666', color: '#fff', cursor: 'pointer', fontWeight: 'bold' };
 const btnPurple = { padding: '10px 35px', borderRadius: '15px', border: 'none', backgroundColor: '#bc7df2', color: '#fff', cursor: 'pointer', fontWeight: 'bold' };
 
-// Modal Styles (เหมือน CreateNovel)
+// Modal Styles 
 const modalOverlay: React.CSSProperties = { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.4)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 };
 const modalContainer: React.CSSProperties = { width: '400px', backgroundColor: '#fff', borderRadius: '45px', padding: '45px 35px', textAlign: 'center', border: '5px solid #bc7df2', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' };
 const modalTitle = { fontSize: '26px', fontWeight: 'bold', color: '#333', marginBottom: '15px' };

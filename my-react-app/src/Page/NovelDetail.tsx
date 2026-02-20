@@ -1,10 +1,10 @@
-import React, { useState } from 'react'; // เพิ่ม useState
-import { useNavigate } from 'react-router-dom'; //
-import { ChevronLeft, Play, BookOpen, Heart, Share2 } from 'lucide-react'; //
+import React, { useState } from 'react'; 
+import { useNavigate } from 'react-router-dom'; 
+import { ChevronLeft, Play, BookOpen, Heart, Share2 } from 'lucide-react'; 
 
 const NovelDetail = () => {
   const navigate = useNavigate(); //
-  const [isHover, setIsHover] = useState(false); // สร้างสถานะสำหรับตรวจจับการชี้เมาส์
+  const [isHover, setIsHover] = useState(false); 
 
   const episodes = [
     { id: 1, title: 'บทนำ: การเริ่มต้นของจุดจบ', date: '12 ก.พ. 2026' },
@@ -25,11 +25,11 @@ const NovelDetail = () => {
             style={{ 
               ...authorText, 
               cursor: 'pointer', 
-              textDecoration: isHover ? 'underline' : 'none' // ถ้าชี้เมาส์ให้มีเส้นใต้
+              textDecoration: isHover ? 'underline' : 'none' 
             }} 
             onClick={() => navigate('/author/Suchanad-Maja')} // กดแล้วไปหน้า Author
-            onMouseEnter={() => setIsHover(true)} // เมื่อเมาส์เข้ามา
-            onMouseLeave={() => setIsHover(false)} // เมื่อเมาส์ออกไป
+            onMouseEnter={() => setIsHover(true)} 
+            onMouseLeave={() => setIsHover(false)} 
           >
             โดย: Suchanad Maja
           </p>
@@ -62,7 +62,7 @@ const NovelDetail = () => {
   );
 };
 
-// Styles (เหมือนเดิมตามไฟล์ต้นฉบับ)
+// Styles 
 const containerStyle: React.CSSProperties = { maxWidth: '900px', margin: '40px auto', padding: '0 20px', fontFamily: "'Kanit', sans-serif" };
 const backBtn: React.CSSProperties = { border: 'none', background: 'none', color: '#9b67bd', cursor: 'pointer', display: 'flex', alignItems: 'center', marginBottom: '20px', fontWeight: 'bold' };
 const headerCard: React.CSSProperties = { display: 'flex', gap: '30px', backgroundColor: '#fff', padding: '30px', borderRadius: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', marginBottom: '40px' };

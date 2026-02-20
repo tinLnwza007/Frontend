@@ -120,7 +120,7 @@ const AddChapterNovel = () => {
         </div>
       </div>
 
-      {/* --- Dropdown/Modal เผยแพร่ --- */}
+      {/*Dropdown/Modal เผยแพร่ */}
       {showPublishModal && (
         <div style={modalOverlay}>
           <div style={modalContainer}>
@@ -133,7 +133,7 @@ const AddChapterNovel = () => {
         </div>
       )}
 
-      {/* Modals เดิม */}
+      {/*Modals */}
       {showSaveConfirm && (
         <div style={modalOverlay}>
           <div style={modalContainer}>
@@ -165,7 +165,7 @@ const AddChapterNovel = () => {
   );
 };
 
-// Styles (คัดมาเฉพาะส่วนที่ต้องใช้เพิ่ม)
+// Styles 
 const pageContainer: React.CSSProperties = { minHeight: '100vh', backgroundColor: '#f9f9f9', padding: '20px', fontFamily: "'Kanit', sans-serif" };
 const headerNav = { maxWidth: '900px', margin: '0 auto 20px auto' };
 const backBtn = { background: 'none', border: 'none', color: '#bc7df2', cursor: 'pointer', display: 'flex', alignItems: 'center', fontWeight: 'bold' };

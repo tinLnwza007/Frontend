@@ -35,7 +35,7 @@ const Register = () => {
   );
 };
 
-// --- Styles (ฟอนต์ Kanit) ---
+// Styles 
 const containerStyle: React.CSSProperties = {
   display: 'flex', justifyContent: 'center', alignItems: 'center', 
   height: '100vh', background: 'linear-gradient(135deg, #f5f7fa 0%, #d6e4ff 100%)',

@@ -6,16 +6,16 @@ const AddChapterManga = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  // --- State สำหรับข้อมูลตอน ---
+  // State สำหรับข้อมูลตอน 
   const [chapterTitle, setChapterTitle] = useState('');
   const [isPublished, setIsPublished] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   
-  // --- State สำหรับรูปภาพ ---
+  // State สำหรับรูปภาพ 
   const [coverImage, setCoverImage] = useState<string | null>(null);
   const [contentImages, setContentImages] = useState<(string | null)[]>([null]);
   
-  // --- UI Control States ---
+  // UI Control States 
   const [showCoverMenu, setShowCoverMenu] = useState(false);
   const [activeContentIndex, setActiveContentIndex] = useState<number | null>(null);
   const [showPublishModal, setShowPublishModal] = useState(false);
@@ -50,7 +50,7 @@ const AddChapterManga = () => {
     }
   };
 
-  // --- Image Handling ---
+  // Image Handling 
   const handleSelectCoverFile = (accept: string) => {
     if (coverInputRef.current) {
       coverInputRef.current.accept = accept;
@@ -92,7 +92,7 @@ const AddChapterManga = () => {
     }
   };
 
-  // --- Save Logic (เหมือนนิยาย) ---
+  // Save Logic 
   const executeSaveData = () => {
     const savedWorks = JSON.parse(localStorage.getItem('myWorks') || '[]');
     const workIndex = savedWorks.findIndex((w: any) => String(w.id) === String(id));
@@ -129,7 +129,7 @@ const AddChapterManga = () => {
       </div>
 
       <div style={formWrapper}>
-        {/* ส่วนที่ 1: อัปโหลดรูปปกตอน */}
+        {/* อัปโหลดรูปปกตอน */}
         <div style={inputGroup}>
           <h2 style={sectionHeader}>กรุณาใส่รูปภาพตอน<span style={{color: '#9b67bd'}}>*</span></h2>
           <div style={{ position: 'relative', width: 'fit-content', margin: '0 auto' }} ref={coverRef}>
@@ -162,7 +162,7 @@ const AddChapterManga = () => {
           </div>
         </div>
 
-        {/* ส่วนที่ 2: ชื่อตอนและเนื้อหา */}
+        {/* ชื่อตอนและเนื้อหา */}
         <div style={inputGroup}>
           <div style={titleRow}>
             <span style={labelPurpleText}>ตอนใหม่</span>
@@ -212,7 +212,7 @@ const AddChapterManga = () => {
           </div>
         </div>
 
-        {/* ส่วนที่ 3: สถานะและปุ่มบันทึก */}
+        {/* สถานะและปุ่มบันทึก */}
         <div style={actionSection}>
           <div style={statusRowContainer}>
             <span style={mainStatusLabel}>เผยแพร่ :</span>
@@ -245,7 +245,7 @@ const AddChapterManga = () => {
         </div>
       </div>
 
-      {/* --- Modals --- */}
+      {/* Modals  */}
       {showPublishModal && (
         <div style={modalOverlay}>
           <div style={modalContainer}>
@@ -290,7 +290,7 @@ const AddChapterManga = () => {
   );
 };
 
-// --- Styles (ผสมผสาน Manga + Novel) ---
+// Styles ( Manga + Novel) 
 const pageContainer: React.CSSProperties = { minHeight: '100vh', backgroundColor: '#f9f9f9', padding: '20px', fontFamily: "'Kanit', sans-serif" };
 const headerNav = { maxWidth: '700px', margin: '0 auto 20px auto' };
 const backBtn = { background: 'none', border: 'none', color: '#bc7df2', cursor: 'pointer', display: 'flex', alignItems: 'center', fontWeight: 'bold' };
