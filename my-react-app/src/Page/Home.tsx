@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { List, Eye, Heart } from 'lucide-react';
+import { List, Eye, Heart, Repeat } from 'lucide-react';
 
 const Home = () => {
   const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState('novel');
-
-  // ข้อมูลหมวดหมู่ยอดนิยม
-  const genres = [
-    'Action', 'Romance', 'Fantasy', 'Horror', 'Comedy', 
-    'Adventure', 'Drama', 'Sci-Fi / Fantasy', 'Slice of Life', 'Isekai'
-  ];
 
   return (
     <div style={containerStyle}>
@@ -56,13 +50,7 @@ const Home = () => {
               <div 
                 key={i} 
                 style={bookCard} 
-                onClick={() => {
-                  if (activeCategory === 'novel') {
-                    navigate('/novel-detail');
-                  } else {
-                    navigate('/manga-detail');
-                  }
-                }}
+                onClick={() => navigate(activeCategory === 'novel' ? '/novel-detail' : '/manga-detail')}
               >
                 <div style={bookCover}>
                    <span style={{color: '#ccc'}}>{activeCategory === 'novel' ? 'Novel' : 'Manga'} {i}</span>
@@ -79,7 +67,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* ส่วนแนวการ์ตูนยอดนิยม (เพิ่มใหม่ตามภาพ) */}
+        {/* ส่วนแนวการ์ตูนยอดนิยม */}
         <section style={genreSection}>
           <div style={titleGroup}>
             <div style={purpleLine}></div>
@@ -88,8 +76,8 @@ const Home = () => {
           
           <div style={genreList}>
             {genres.map((genre) => (
-              <span key={genre} style={genreTag}>
-                {genre}
+              <span key={genre.name} style={{...genreTag, backgroundColor: genre.color}}>
+                {genre.name}
               </span>
             ))}
           </div>
@@ -98,6 +86,22 @@ const Home = () => {
     </div>
   );
 };
+
+// ข้อมูลหมวดหมู่ตามรูปภาพ
+const genres = [
+  { name: 'นิยายรัก', color: '#F7ADF0' },
+  { name: 'รักวัยรุ่น', color: '#98DED9' },
+  { name: 'โรมานซ์', color: '#EBC95E' },
+  { name: 'จีนโบราณ', color: '#C8A2F2' },
+  { name: 'สยองขวัญ', color: '#F28F8F' },
+  { name: 'Comedy', color: '#E2E67B' },
+  { name: 'ผจญภัย แอคชั่น', color: '#9BB1F5' },
+  { name: 'BL Lovely', color: '#B979D9' },
+  { name: 'GL Lovely', color: '#E8A675' },
+  { name: 'แนวทางเลือก', color: '#B6F2D4' },
+  { name: 'สืบสวน', color: '#EBCB76' },
+  { name: 'สาระความรู้', color: '#7EB5E6' },
+];
 
 // --- Styles ---
 const containerStyle: React.CSSProperties = { backgroundColor: '#fff', minHeight: '100vh', fontFamily: "'Kanit', sans-serif" };
@@ -122,17 +126,8 @@ const statsContainer: React.CSSProperties = { display: 'flex', gap: '12px' };
 const statItem: React.CSSProperties = { display: 'flex', alignItems: 'center', gap: '4px' };
 const statText: React.CSSProperties = { fontSize: '12px', color: '#aaa' };
 
-// เพิ่มเติม Style ส่วน Genre
 const genreSection: React.CSSProperties = { marginTop: '60px', marginBottom: '80px' };
-const genreList: React.CSSProperties = { display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '25px' };
-const genreTag: React.CSSProperties = { 
-  padding: '10px 22px', 
-  backgroundColor: '#efefef', 
-  borderRadius: '25px', 
-  fontSize: '15px', 
-  color: '#555', 
-  cursor: 'pointer',
-  fontWeight: '500'
-};
+const genreList: React.CSSProperties = { display: 'flex', display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '25px',maxWidth: '900px' };
+const genreTag: React.CSSProperties = { padding: '8px 24px', borderRadius: '25px', fontSize: '18px',     color: '#333', cursor: 'pointer', fontWeight: '500',border: 'none',display: 'inline-block'};
 
 export default Home;
