@@ -94,7 +94,7 @@ const CommentSection: React.FC<Props> = ({ currentChapterTitle }) => {
   );
 };
 
-// --- CSS Styles ---
+// Styles
 const textareaStyle: React.CSSProperties = {
   width: '100%', minHeight: '120px', padding: '15px', borderRadius: '12px',
   border: '1px solid #eee', fontSize: '16px', fontFamily: 'inherit', outline: 'none'

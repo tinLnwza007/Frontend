@@ -22,7 +22,7 @@ const Navbar = () => {
             style={logoContainer} 
             onClick={() => handleNavigate('/home')}
           >
-            {/* ไอคอน Home และคำว่า หน้าหลัก */}
+            {/* ไอคอน Home + หน้าหลัก */}
             <div style={homeGroup}>
               <svg 
                 viewBox="0 0 24 24" 
@@ -39,23 +39,23 @@ const Navbar = () => {
               <span style={homeText}>หน้าหลัก</span>
             </div>
             
-            {/* ชื่อแบรนด์ */}
+            {/* ชื่อparty */}
             <h1 style={logoStyle}>READTIME</h1>
           </div>
 
           <div style={menuTabs}>
-            {/* Tab ว่างๆ ตามโค้ดเดิม */}
+            {/* Tab ว่างๆ  */}
             <span style={navTab} onClick={() => handleNavigate('/home')}></span>
           </div>
         </div>
         
-        {/* ส่วนกลาง: Search Bar */}
+        {/* Search Bar */}
         <div style={searchContainer}>
           <Search size={18} style={searchIconInside} />
           <input type="text" placeholder="ค้นหานิยาย การ์ตูน..." style={searchInput} />
         </div>
         
-        {/* ส่วนขวา: Icons */}
+        {/* Icons */}
         <div style={navRightSide}>
           <div style={{ position: 'relative' }}>
             <div style={iconBadge} onClick={() => { setShowNoti(!showNoti); setShowProfile(false); }}>
@@ -116,7 +116,7 @@ const Navbar = () => {
   );
 };
 
-// --- Styles ที่ปรับปรุงใหม่ ---
+// Styles 
 const logoContainer: React.CSSProperties = { 
   display: 'flex', 
   alignItems: 'center', 
@@ -149,7 +149,7 @@ const logoStyle: React.CSSProperties = {
   fontFamily: 'Arial Black, sans-serif' 
 };
 
-// --- Styles พื้นฐานคงเดิม ---
+//Styles 
 const navbarStyle: React.CSSProperties = { padding: '12px 0', borderBottom: '1px solid #f3f3f3', backgroundColor: '#fff', position: 'sticky', top: 0, zIndex: 1000 };
 const navInner: React.CSSProperties = { maxWidth: '1700px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 30px' };
 const navLeftSide: React.CSSProperties = { display: 'flex', alignItems: 'center', gap: '40px', flexShrink: 0 };
